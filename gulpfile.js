@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     compass = require('gulp-compass'),
+    autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber');
 
 gulp.task('default', function(){
@@ -26,6 +27,7 @@ gulp.task('scss', function(){
             sass: 'src/assets/scss',
             require: ['susy'],
         }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('dist/css/'));
 });
 

@@ -4,6 +4,7 @@
   "description": "My own portfolio page",
   "main": "index.js",
   "dependencies": {
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-compass": "^2.1.0",
     "gulp-install": "^1.1.0",
     "gulp-plumber": "^1.2.0",
