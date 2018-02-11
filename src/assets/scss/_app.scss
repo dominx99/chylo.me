@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-image: url(../img/background.jpg);
+}
+
+.avatar {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 2px solid white;
+}
+
+.main {
+    min-height: 300px;
+    padding-top: 100px;
+    background-color: rgba_color($dark, .85);
+    color: $white;
+}
+
+.about-me {
+    font-size: 1.2rem;
+}
+
+.lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.anton {
+    font-family: 'Anton', sans-serif;
+}
+
+.all {
+    margin: 60px auto;
+}
+
+.layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba_color($layer-color, .4);
+}
+
+.ul-skills {
+    list-style-type: none;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 0;
+    }
+
+    .icon-star, .icon-star-empty {
+        color: $yellow;
+    }
+}

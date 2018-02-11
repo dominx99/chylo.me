@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{config['name']}}</title>
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/fontello.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/main.css">
 </head>
 <body>
-    {% block content %}{% endblock %}
+    <div class="layer"></div>
+    <div class="container all">
+        {% include 'partials/navbar.twig' %}
+        <main class="main">
+            {% block content %}{% endblock %}
+        </main>
+        {% include 'partials/footer.twig' %}
+    </div>
 </body>
 </html>

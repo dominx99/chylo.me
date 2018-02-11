@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %}
+
+{% set then = "2015-09-01" | date('Y-m-d') %}
+{% set now = "now" | date('Y-m-d') %}
+{% set diff = date(now).diff(date(then)) %}
+
+{% block content %}
+    <div class="about-me text-white text-center">
+        <h1 class="fw-700 ls-1 anton">Dominik Chylo</h1>
+        <h3 class="fw-400 text-gray mt-2 anton">Backend developer</h3>
+
+        <hr style="margin: 3em auto; color: #eee; width: 90%;">
+
+        <div class="mt-2 container">
+            <p>Programowania uczę się od {{ (diff.days / 365) | round(0, 'floor') }} lat. Specjalizuję się w pisaniu backend'u stron internetowych. Obecnie jestem uczniem technikum informatycznego.</p>
+        </div>
+    </div>
+{% endblock %}

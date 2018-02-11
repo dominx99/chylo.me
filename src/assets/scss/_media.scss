@@ -1,0 +1,48 @@
+@media screen and (min-width: $md) {
+    .navbar {
+        padding-bottom: 95px;
+    }
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: $sm) and (max-width: $md){
+    .about-me {
+        padding-top: 100px - (25px / 2);
+    }
+    .navbar {
+        padding-bottom: 70px + (25px / 2);
+    }
+    .avatar {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: $sm){
+    .about-me {
+        padding-top: 75px;
+    }
+    .navbar {
+        padding-bottom: 70px;
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: $sm){
+    .container {
+        width: auto;
+    }
+    .all {
+        margin: 0;
+        &.container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "skills": {
+        "frontend": [
+            {
+                "name": "HTML",
+                "rate": 4
+            },
+            {
+                "name": "CSS",
+                "rate": 4
+            },
+            {
+                "name": "Javascript",
+                "rate": 3
+            },
+            {
+                "name": "jQuery",
+                "rate": 3
+            },
+            {
+                "name": "SASS",
+                "rate": 2
+            }
+        ],
+        "backend": [
+            {
+                "name": "PHP",
+                "rate": 4
+            },
+            {
+                "name": "MySQL",
+                "rate": 3
+            },
+            {
+                "name": "Slim Framework",
+                "rate": 3
+            },
+            {
+                "name": "Laravel",
+                "rate": 3
+            }
+        ]
+    }
+}

@@ -1,3 +1,40 @@
 .navbar {
-    color: red;
+    background-color: rgba_color($red, .85);
+    color: $white;
+    padding: 18px;
+    padding-bottom: 95px;
+    display: flex;
+    justify-content: between;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        margin-left: auto;
+        li {
+            margin: 0 5px;
+        }
+    }
+
+    .nav-social {
+        display: flex;
+        li {
+            a {
+                display: block;
+                margin: 0 5px;
+                &:hover {
+                    background-color: $main-color - 15;
+                }
+            }
+        }
+    }
 }

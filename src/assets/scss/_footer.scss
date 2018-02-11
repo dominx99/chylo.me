@@ -1,3 +1,5 @@
 .footer {
-    background-color: black;
+    background-color: rgba_color($dark, .85);
+    min-height: 200px;
+    border-radius: 0 0 8px 8px;
 }

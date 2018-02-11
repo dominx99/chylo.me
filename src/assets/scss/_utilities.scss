@@ -1,0 +1,49 @@
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.mt-2 {
+    margin-top: .5rem;
+}
+
+.mt-3 {
+    margin-top: .75rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-5 {
+    margin-top: 1.5rem;
+}
+
+.d-flex {
+    display: flex;
+}
