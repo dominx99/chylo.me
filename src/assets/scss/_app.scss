@@ -7,7 +7,7 @@ body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/bg-blur.png);
 }
 
 .avatar {
@@ -24,12 +24,16 @@ body {
 .main {
     min-height: 300px;
     padding-top: 100px;
-    background-color: rgba_color($dark, .85);
+    background-color: rgba_color($dark, $opacity-content);
     color: $white;
 }
 
 .about-me {
     font-size: 1.2rem;
+}
+
+.about-me-text {
+    width: 50%;
 }
 
 .lobster {
@@ -51,7 +55,7 @@ body {
     width: 100%;
     height: 100vh;
     z-index: -1;
-    background-color: rgba_color($layer-color, .4);
+    background-color: rgba_color($layer-color, $opacity-layer);
 }
 
 .ul-skills {
