@@ -15,9 +15,6 @@
 }
 
 @media screen and (min-width: $sm) and (max-width: $md){
-    .about-me {
-        padding-top: 100px - (25px / 2);
-    }
     .navbar {
         padding-bottom: 70px + (25px / 2);
     }
@@ -31,9 +28,6 @@
 }
 
 @media screen and (max-width: $sm){
-    .about-me {
-        padding-top: 75px;
-    }
     .navbar {
         padding-bottom: 70px;
     }
@@ -44,6 +38,10 @@
 }
 
 @media screen and (max-width: $sm){
+    .main {
+        padding-top: 70px;
+    }
+    
     .container {
         width: auto;
     }

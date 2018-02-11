@@ -7,16 +7,23 @@
     <title>{{config['name']}}</title>
     <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/fontello.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/animate.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/main.css">
 </head>
 <body>
     <div class="layer"></div>
-    <div class="container all">
+    <div class="container all wow fadeIn">
         {% include 'partials/navbar.twig' %}
         <main class="main">
             {% block content %}{% endblock %}
         </main>
         {% include 'partials/footer.twig' %}
     </div>
+
+    <script src="{{base_url()}}/dist/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="{{base_url()}}/dist/js/main.min.js"></script>
 </body>
 </html>
