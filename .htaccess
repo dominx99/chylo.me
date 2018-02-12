@@ -1,3 +1,15 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access 4 hours"
+    ExpiresByType image/jpg "access 4 hours"
+    ExpiresByType image/png "access 4 hours"
+    ExpiresByType text/css "access 4 hours"
+    ExpiresByType application/javascript "access 4 hours"
+    ExpiresByType text/javascript "access 4 hours"
+    ExpiresByType text/x-javascript "access 4 hours"
+    ExpiresByType image/x-icon "access 1 year"
+</IfModule>
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
