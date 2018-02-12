@@ -1,13 +1,23 @@
 
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    compass = require('gulp-compass'),
-    imagemin = require('gulp-imagemin'),
-    autoprefixer = require('gulp-autoprefixer'),
-    plumber = require('gulp-plumber');
+const   gulp = require('gulp'),
+        uglify = require('gulp-uglify'),
+        rename = require('gulp-rename'),
+        compass = require('gulp-compass'),
+        imagemin = require('gulp-imagemin'),
+        csso = require('gulp-csso');
+        autoprefixer = require('gulp-autoprefixer'),
+        plumber = require('gulp-plumber');
 
-gulp.task('image-optimize', function(){
+gulp.task('css', () => {
+    gulp.src('src/assets/css/**/*.css')
+        .pipe(plumber())
+        .pipe(csso())
+        .pipe(autoprefixer())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('img', function(){
     gulp.src('src/assets/img/*')
         .pipe(imagemin({
             interlaced: true,
@@ -20,8 +30,8 @@ gulp.task('image-optimize', function(){
 gulp.task('js', function(){
     gulp.src(['src/assets/js/**/*.js', '!src/assets/js/**/*.min.js'])
         .pipe(plumber())
-        .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -35,16 +45,19 @@ gulp.task('scss', function(){
             require: ['susy'],
         }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('watch', function(){
     gulp.watch('src/assets/js/**/*.js', ['js']);
     gulp.watch('src/assets/scss/**/*.scss', ['scss']);
+    gulp.watch('src/assets/css/**/*.css', ['css']);
 });
 
 gulp.task('default', [
-    'image-optimize',
+    'css',
+    'img',
     'js',
     'scss',
     'watch',
