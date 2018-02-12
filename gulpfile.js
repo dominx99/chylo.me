@@ -3,11 +3,18 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     compass = require('gulp-compass'),
+    imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber');
 
-gulp.task('default', function(){
-    console.log('works')
+gulp.task('image-optimize', function(){
+    gulp.src('src/assets/img/*')
+        .pipe(imagemin({
+            interlaced: true,
+            progressive: true,
+            optimizationLevel: 5
+        }))
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('js', function(){
@@ -37,6 +44,7 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', [
+    'image-optimize',
     'js',
     'scss',
     'watch',
