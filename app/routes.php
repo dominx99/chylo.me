@@ -8,6 +8,6 @@ $app->get('/skills', function($request, $response){
     return $this->view->render($response, 'skills.twig');
 })->setName('skills');
 
-$app->get('/app', function(){
-    return 'app';
-});
+$app->get('/projects', function($request, $response){
+    return $this->view->render($response, 'projects.twig');
+})->setName('projects');
