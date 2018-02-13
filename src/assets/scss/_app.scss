@@ -68,7 +68,11 @@ body {
         padding: 7px 0;
     }
 
-    .icon-star, .icon-star-empty {
+    .fa-star {
         color: $yellow;
+    }
+
+    .star-empty {
+        color: $white;
     }
 }

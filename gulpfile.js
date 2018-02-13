@@ -3,19 +3,17 @@ const   gulp = require('gulp'),
         rename = require('gulp-rename'),
         compass = require('gulp-compass'),
         imagemin = require('gulp-imagemin'),
-        csso = require('gulp-csso');
-        fontello = require('gulp-fontello')
+        csso = require('gulp-csso'),
         autoprefixer = require('gulp-autoprefixer'),
         plumber = require('gulp-plumber');
 
-gulp.task('glyph', () => {
-    gulp.src('src/assets/config.json')
-        .pipe(fontello())
-        .pipe(gulp.dest('dist'));
+gulp.task('minCss', () => {
+    gulp.src(['src/assets/css/**/*.min.css'])
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('css', () => {
-    gulp.src('src/assets/css/**/*.css')
+    gulp.src(['src/assets/css/**/*.css', '!src/assets/css/**/*.min.css'])
         .pipe(plumber())
         .pipe(csso())
         .pipe(autoprefixer())
@@ -63,9 +61,9 @@ gulp.task('watch', function(){
 
 gulp.task('default', [
     'css',
+    'minCss',
     'img',
     'js',
-    'glyph',
     'scss',
     'watch',
 ]);

@@ -13,7 +13,7 @@
                                 <span>{{skill.name}}</span>
                                 <div>
                                     {% for i in 1..5 %}
-                                        <span class="icon-star{{skill.rate >= i ? '' : '-empty'}}"></span>
+                                        <span class="fas fa-star{{skill.rate >= i ? '' : ' star-empty'}}"></span>
                                     {% endfor %}
                                 </div>
                             </li>
@@ -30,7 +30,7 @@
                                 <span>{{skill.name}}</span>
                                 <div>
                                     {% for i in 1..5 %}
-                                        <span class="icon-star{{skill.rate >= i ? '' : '-empty'}}"></span>
+                                        <span class="fas fa-star{{skill.rate >= i ? '' : ' star-empty'}}"></span>
                                     {% endfor %}
                                 </div>
                             </li>

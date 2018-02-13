@@ -2,6 +2,7 @@ var button = document.getElementById('navbar-toggle'),
     el     = document.getElementById('navbar'),
     md     = 768;
 
+
 function toggle(){
     toggleClass(el, 'sidebar');
 }

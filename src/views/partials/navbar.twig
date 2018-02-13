@@ -2,20 +2,22 @@
 
     <div class="nav-social mr-auto">
         <a target="_blank" href="https://www.facebook.com/dominik.chylo">
-            <span class="icon-facebook"></span>
+            <span class="fab fa-facebook-f"></span>
         </a>
         <a target="_blank" href="https://www.linkedin.com/in/dominik-chylo/">
-            <span class="icon-linkedin"></span>
+            <span class="fab fa-linkedin-in"></span>
         </a>
         <a target="_blank" href="https://github.com/dominx99">
-            <span class="icon-github"></span>
+            <span class="fab fa-github"></span>
         </a>
     </div>
 
     <div class="navbar-nav md-show">
-        <a href="{{path_for('about.me')}}">O mnie</a>
-        <a href="{{path_for('skills')}}">Umiejętności</a>
+        <a href="{{path_for('about.me')}}"><span class="fa fa-user"></span> O mnie</a>
+        <a href="{{path_for('skills')}}"><span class="fa fa-star"></span> Umiejętności</a>
     </div>
 
-    <span id="navbar-toggle" class="icon-menu c-pointer md-hidden navbar-toggle"></span>
+    <span id="navbar-toggle">
+        <span class="fa fa-bars c-pointer md-hidden navbar-toggle"></span>
+    </span>
 </nav>
