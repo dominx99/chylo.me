@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-fontello": "^0.4.6",
     "gulp-imagemin": "^4.1.0"
   },
   "scripts": {

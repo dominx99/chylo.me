@@ -1,12 +1,18 @@
-
 const   gulp = require('gulp'),
         uglify = require('gulp-uglify'),
         rename = require('gulp-rename'),
         compass = require('gulp-compass'),
         imagemin = require('gulp-imagemin'),
         csso = require('gulp-csso');
+        fontello = require('gulp-fontello')
         autoprefixer = require('gulp-autoprefixer'),
         plumber = require('gulp-plumber');
+
+gulp.task('glyph', () => {
+    gulp.src('src/assets/config.json')
+        .pipe(fontello())
+        .pipe(gulp.dest('dist'));
+});
 
 gulp.task('css', () => {
     gulp.src('src/assets/css/**/*.css')
@@ -59,6 +65,7 @@ gulp.task('default', [
     'css',
     'img',
     'js',
+    'glyph',
     'scss',
     'watch',
 ]);
