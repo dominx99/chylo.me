@@ -12,8 +12,10 @@
 </head>
 <body>
     <div class="layer"></div>
-    <div class="container all wow fadeIn">
+
+    <div class="container all wow fadeIn relative">
         {% include 'partials/navbar.twig' %}
+        <img class="avatar" src="{{base_url()}}/dist/img/me.jpg" alt="me">
         <main class="main">
             {% block content %}{% endblock %}
         </main>
@@ -24,6 +26,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="{{base_url()}}/src/assets/js/sidebar.js"></script>
     <script src="{{base_url()}}/dist/js/main.min.js"></script>
 </body>
 </html>

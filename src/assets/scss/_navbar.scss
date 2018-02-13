@@ -4,7 +4,7 @@
     padding: 18px;
     padding-bottom: 95px;
     display: flex;
-    justify-content: between;
+    justify-content: flex-end;
     position: relative;
     border-radius: 8px 8px 0 0;
 
@@ -19,19 +19,16 @@
 
     .navbar-nav {
         display: flex;
-        margin-left: auto;
-        li {
+        a {
             margin: 0 5px;
         }
     }
 
     .nav-social {
         display: flex;
-        li {
-            a {
-                display: block;
-                margin: 0 5px;
-            }
+        a {
+            display: block;
+            margin: 0 5px;
         }
     }
 }

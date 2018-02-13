@@ -41,18 +41,25 @@
     .main {
         padding-top: 70px;
     }
-    
+
     .container {
         width: auto;
+    }
+    .about-me-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: $md){
+    .navbar {
+        border-radius: 0;
     }
     .all {
         margin: 0;
         &.container {
+            max-width: none;
             padding-left: 0;
             padding-right: 0;
         }
-    }
-    .about-me-text {
-        width: 100%;
     }
 }

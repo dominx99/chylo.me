@@ -1,8 +1,4 @@
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-}
+//TEXT - FONT
 
 .text-white {
     color: $white;
@@ -28,6 +24,8 @@
     font-weight: 400;
 }
 
+//MARGIN
+
 .mt-2 {
     margin-top: .5rem;
 }
@@ -48,6 +46,38 @@
     margin-top: 3rem;
 }
 
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+//DISPLAY
+
 .d-flex {
     display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: $md){
+    .md-hidden {
+        display: none !important;
+    }
+}
+
+//CURSORS
+
+.c-pointer {
+    cursor: pointer;
+}
+
+//POSITION
+
+.relative {
+    position: relative;
 }

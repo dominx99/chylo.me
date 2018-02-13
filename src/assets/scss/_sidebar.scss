@@ -1,0 +1,45 @@
+@media screen and (max-width: $md){
+    .navbar {
+        .navbar-nav {
+            display: none;
+        }
+    }
+    .navbar.sidebar {
+        background-color: $red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: $z-index;
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .nav-social {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+        }
+
+        .navbar-toggle {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                padding: 10px;
+            }
+        }
+    }
+}
