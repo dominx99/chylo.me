@@ -1,3 +1,21 @@
+//BG COLORS
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-red-7 {
+    background-color: rgba_color($red, .7);
+}
+
+.bg-dark {
+    background-color: $dark;
+}
+
+.bg-dark-7 {
+    background-color: rgba_color($dark, .7);
+}
+
 //TEXT - FONT
 
 .text-white {
@@ -77,6 +95,10 @@
 }
 
 //POSITION
+
+.float-right {
+    float: right;
+}
 
 .relative {
     position: relative;

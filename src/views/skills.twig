@@ -2,11 +2,11 @@
 
 {% block content %}
     <h1 class="text-center text-white anton ls-1 fw-700">Umiejętności</h1>
-    
+
     <div class="row mt-5">
         <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="card">
-                <h4 class="card-header text-center">Frontend</h4>
+            <div class="card bg-dark-7">
+                <h4 class="card-header text-center bg-red-7">Frontend</h4>
                 <ul class="card-body ul-skills">
                     {% for skill in data.skills.frontend %}
                         <li>
@@ -22,8 +22,8 @@
             </div>
         </div>
         <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
-            <div class="card">
-                <h4 class="card-header text-center">Backend</h4>
+            <div class="card bg-dark-7">
+                <h4 class="card-header text-center bg-red-7">Backend</h4>
                 <ul class="card-body ul-skills">
                     {% for skill in data.skills.backend %}
                         <li>

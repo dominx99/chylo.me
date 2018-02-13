@@ -1,10 +1,40 @@
 .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 
     .card-header{
-        background-color: rgba_color($red, .4);
         padding: 15px;
     }
+
+    .card-img {
+        max-width: 100%;
+    }
+
     .card-body{
         padding: 15px;
+    }
+}
+
+.card-columns {
+    display: flex;
+    flex-flow: row wrap;
+
+    .card {
+        width: calc(100% / 3 - 20px);
+        margin: 10px;
+    }
+}
+
+@media (max-width: $md) {
+    .card-columns {
+        .card {
+            width: calc(100% / 2 - 20px);
+        }
     }
 }

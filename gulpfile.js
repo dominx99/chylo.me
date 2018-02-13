@@ -4,16 +4,12 @@ const   gulp = require('gulp'),
         compass = require('gulp-compass'),
         imagemin = require('gulp-imagemin'),
         csso = require('gulp-csso'),
+        imageResize = require('gulp-image-resize'),
         autoprefixer = require('gulp-autoprefixer'),
         plumber = require('gulp-plumber');
 
-gulp.task('minCss', () => {
-    gulp.src(['src/assets/css/**/*.min.css'])
-        .pipe(gulp.dest('dist/css'));
-});
-
 gulp.task('css', () => {
-    gulp.src(['src/assets/css/**/*.css', '!src/assets/css/**/*.min.css'])
+    return gulp.src(['src/assets/css/**/*.css', '!src/assets/css/**/*.min.css'])
         .pipe(plumber())
         .pipe(csso())
         .pipe(autoprefixer())
@@ -22,7 +18,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('img', function(){
-    gulp.src('src/assets/img/*')
+    return gulp.src('src/assets/img/**/*')
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
@@ -32,7 +28,7 @@ gulp.task('img', function(){
 });
 
 gulp.task('js', function(){
-    gulp.src(['src/assets/js/**/*.js', '!src/assets/js/**/*.min.js'])
+    return gulp.src(['src/assets/js/**/*.js', '!src/assets/js/**/*.min.js'])
         .pipe(plumber())
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
@@ -40,7 +36,7 @@ gulp.task('js', function(){
 });
 
 gulp.task('scss', function(){
-    gulp.src('src/assets/scss/main.scss')
+    return gulp.src('src/assets/scss/main.scss')
         .pipe(plumber())
         .pipe(compass({
             config_file: 'config.rb',
@@ -59,11 +55,23 @@ gulp.task('watch', function(){
     gulp.watch('src/assets/css/**/*.css', ['css']);
 });
 
+gulp.task('thumbs', () => {
+    return gulp.src('src/assets/img/projects/**/*')
+        .pipe(plumber())
+        .pipe(imageResize({
+            width: 550,
+            height: 450,
+            cover: true,
+            quality: 0.9
+        }))
+        .pipe(gulp.dest('dist/img/projects/thumbs'));
+});
+
 gulp.task('default', [
     'css',
-    'minCss',
-    'img',
     'js',
     'scss',
+    'img',
+    'thumbs',
     'watch',
 ]);

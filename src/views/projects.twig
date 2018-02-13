@@ -1,7 +1,26 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-        <div class="row">
-            <div class="col-md-12">text</div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="fw-700 ls-1 anton text-center">Projekty</h1>
+
+            <div class="card-columns mt-5">
+                {% for project in data.projects %}
+                    <div class="card bg-dark-7 wow zoomIn">
+                        <div class="card-header bg-red-7">
+                            {{project.name}}
+                            <a target="_blank" href="{{project.link}}" class="float-right">
+                                <span class="fa fa-link"></span>
+                            </a>
+                        </div>
+                        <img class="card-img" src="{{base_url()}}/dist/img/projects/thumbs/{{project.thumbnail}}" alt="">
+                        <div class="card-body">
+                            <p>{{project.description}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
+    </div>
 {% endblock %}

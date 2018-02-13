@@ -40,5 +40,19 @@
                 "rate": 3
             }
         ]
-    }
+    },
+    "projects": [
+        {
+            "name": "chylo.me",
+            "description": "Moje własne portfolio.",
+            "thumbnail": "portfolio.png",
+            "link": "http://chylo.cba.pl"
+        },
+        {
+            "name": "parafia-biskupiec.eu",
+            "description": "Lokalna strona parafii.",
+            "thumbnail": "parafia-biskupiec.png",
+            "link": "http://parafia-biskupiec.eu"
+        }
+    ]
 }
