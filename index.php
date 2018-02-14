@@ -15,11 +15,11 @@ $container['config'] = function($container){
 };
 
 $container['data'] = function($container){
-    return json_decode(file_get_contents(__DIR__ . '/src/config.json'), true);
+    return json_decode(file_get_contents(__DIR__ . '/app/data.json'), true);
 };
 
 $container['view'] = function($container){
-    $view = new Slim\Views\Twig('src/views', [
+    $view = new Slim\Views\Twig('views', [
         //'cache' => 'path/to/cache',
     ]);
 

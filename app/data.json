@@ -45,13 +45,13 @@
         {
             "name": "chylo.me",
             "description": "Moje własne portfolio.",
-            "thumbnail": "portfolio.png",
+            "thumbnail": "portfolio.jpg",
             "link": "http://chylo.cba.pl"
         },
         {
             "name": "parafia-biskupiec.eu",
             "description": "Lokalna strona parafii.",
-            "thumbnail": "parafia-biskupiec.png",
+            "thumbnail": "parafia-biskupiec.jpg",
             "link": "http://parafia-biskupiec.eu"
         }
     ]
