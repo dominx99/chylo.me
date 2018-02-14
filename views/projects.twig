@@ -9,12 +9,14 @@
                 {% for project in data.projects %}
                     <div class="card bg-dark-7 wow zoomIn">
                         <div class="card-header bg-red-7">
-                            {{project.name}}
+                            <a href="{{path_for('projects', {'slug': project.slug})}}">{{project.name}}</a>
                             <a target="_blank" href="{{project.link}}" class="float-right">
                                 <span class="fa fa-link"></span>
                             </a>
                         </div>
-                        <img class="card-img" src="{{base_url()}}/dist/img/projects/thumbs/{{project.thumbnail}}" alt="">
+                        <a href="{{path_for('projects', {'slug': project.slug})}}">
+                            <img class="card-img" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}" alt="">
+                        </a>
                         <div class="card-body">
                             <p>{{project.description}}</p>
                         </div>

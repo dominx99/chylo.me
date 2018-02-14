@@ -16,7 +16,7 @@
         {% include 'partials/navbar.twig' %}
         <img class="avatar" src="{{base_url()}}/dist/img/me.jpg" alt="me">
         <main class="main">
-            <div class="container">
+            <div class="container-fluid">
                 {% block content %}{% endblock %}
             </div>
         </main>
@@ -28,7 +28,7 @@
         new WOW().init();
     </script>
     <script src="{{base_url()}}/dist/js/font-awesome.min.js"></script>
-    <script src="{{base_url()}}/src/assets/js/sidebar.js"></script>
+    <script src="{{base_url()}}/dist/js/sidebar.min.js"></script>
     <script src="{{base_url()}}/dist/js/main.min.js"></script>
 </body>
 </html>

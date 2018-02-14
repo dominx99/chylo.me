@@ -1,0 +1,20 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="fw-700 ls-1 anton text-center">{{project.name}}</h1>
+
+            <div class="mt-6 container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="img" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}" alt="">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        {{project.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
