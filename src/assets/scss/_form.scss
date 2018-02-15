@@ -1,0 +1,33 @@
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.05rem;
+    border-bottom: 2px solid $gray;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+button {
+    width: fit-content;
+    padding: 10px 15px;
+    border: none;
+    box-shadow: 1px 1px 2px 0 $red - 15;
+    outline: none;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:active, &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-red {
+    background-color: $red;
+    color: $white;
+}

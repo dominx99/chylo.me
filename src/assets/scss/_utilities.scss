@@ -30,6 +30,10 @@
     text-align: center;
 }
 
+.text-red {
+    color: $red;
+}
+
 .ls-1 {
     letter-spacing: 1px;
 }
@@ -76,6 +80,10 @@
 
 .d-flex {
     display: flex;
+}
+
+.d-block {
+    display: block;
 }
 
 .hidden {

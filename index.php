@@ -10,6 +10,8 @@ $app = new Slim\App([
 ]);
 $container = $app->getContainer();
 
+$container['path'] = __DIR__;
+
 $container['config'] = function($container){
     return $config = require_once(__DIR__ . '/app/config.php');
 };

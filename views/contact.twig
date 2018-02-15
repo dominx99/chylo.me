@@ -1,0 +1,62 @@
+{% extends 'layout.twig' %}
+
+{% set then = data['info']['birth'] | date('Y-m-d') %}
+{% set now = "now" | date('Y-m-d') %}
+{% set diff = date(now).diff(date(then)) %}
+
+{% block content %}
+
+    <h1 class="text-center">Kontakt</h1>
+
+    <div class="row mt-5">
+        <div class="col-md-6 mt-4">
+            <div class="card">
+                <div class="card-header bg-red">Informacje</div>
+                <div class="card-body bg-dark">
+                    <div class="row">
+                        <div class="col-4">
+                            <p>Telefon: </p>
+                            <p>Email: </p>
+                            <p>Wiek: </p>
+                        </div>
+                        <div class="col-8">
+                            <a class="d-block" href="tel:{{data['info']['phone']}}">{{data['info']['phone']}}</a>
+                            <a class="d-block" href="mailto:{{data['info']['email']}}">{{data['info']['email']}}</a>
+                            <p>{{ (diff.days / 365) | round(0, 'floor') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="card">
+                <div class="card-header bg-red">Wiadomość</div>
+                <div class="card-body bg-dark">
+                    <form action="{{path_for('email.send')}}" method="post">
+
+                        <div class="">
+                            <label for="from">Email</label>
+                            <input type="text" id="from" name="from" placeholder="jan@kowalski.pl">
+                        </div>
+
+
+                        <div class="mt-5">
+                            <label for="subject">Tytuł</label>
+                            <input class="mt-5" type="text" id="subject" name="subject" placeholder="Chciałbym Ci zlecić...">
+                        </div>
+
+                        <div class="mt-5">
+                            <label for="body">Treść</label>
+                            <textarea class="mt-5" id="body" name="body" rows="8" cols="80" placeholder="Tutaj zamieszczam szczegóły projektu..."></textarea>
+                            <button type"submit" class="btn-red mt-4 float-right">
+                                Wyślij &nbsp; <span class="fas fa-external-link-alt"></span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

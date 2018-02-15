@@ -1,4 +1,10 @@
 {
+    "info": {
+        "phone": "782261099",
+        "email": "dominx992@gmail.com",
+        "birth": "1999-10-26"
+    },
+
     "skills": {
         "frontend": [
             {
@@ -41,6 +47,7 @@
             }
         ]
     },
+
     "projects": [
         {
             "name": "chylo.me",
