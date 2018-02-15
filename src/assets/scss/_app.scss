@@ -81,3 +81,59 @@ a {
 .img {
     max-width: 100%;
 }
+
+.project-categories {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: $lg) {
+    .project-categories {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+.project-images {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 3rem;
+
+    > div {
+        margin: 10px;
+        width: calc((100% / 4) - 20px);
+
+        a {
+            display: block;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: $lg){
+    .project-images {
+        > div {
+            width: calc((100% / 3) - 20px);
+        }
+    }
+}
+
+@media (max-width: $md){
+    .project-images {
+        > div {
+            width: calc((100% / 2) - 20px);
+        }
+    }
+}
+
+@media (max-width: $sm){
+    .project-images {
+        > div {
+            width: calc(100% - 20px);
+        }
+    }
+}

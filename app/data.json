@@ -44,21 +44,31 @@
     "projects": [
         {
             "name": "chylo.me",
-            "description": "Moje własne portfolio.",
+            "description": {
+                "short": "Moje własne portfolio",
+                "long": ""
+            },
+            "categories": ["PHP", "Slim Framework", "Javascript", "SASS"],
+            "link": "http://chylo.cba.pl",
+            "slug": "chylo-me",
             "images": [
                 "portfolio.jpg"
-            ],
-            "link": "http://chylo.cba.pl",
-            "slug": "chylo-me"
+            ]
         },
         {
             "name": "parafia-biskupiec.eu",
-            "description": "Lokalna strona parafii.",
-            "images": [
-                "parafia-biskupiec.jpg"
-            ],
+            "description": {
+                "short": "Lokalna strona parafii.",
+                "long": "Strona posiada system zarządzania treścią, możliwość dodawania, edytowania, usuwania artykułów i innych treści ze strony."
+            },
+            "categories": ["PHP", "Laravel", "MySQL", "Javascript"],
             "link": "http://parafia-biskupiec.eu",
-            "slug": "parafia-biskupiec"
+            "slug": "parafia-biskupiec",
+            "images": [
+                "parafia-biskupiec.jpg",
+                "parafia-biskupiec-1.jpg",
+                "parafia-biskupiec-2.jpg"
+            ]
         }
     ]
 }

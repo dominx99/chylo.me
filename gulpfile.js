@@ -61,7 +61,6 @@ gulp.task('thumbs', () => {
         .pipe(imageResize({
             width: 550,
             height: 450,
-            cover: true,
             quality: 0.9
         }))
         .pipe(gulp.dest('dist/img/projects/thumbs'));

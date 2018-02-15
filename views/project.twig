@@ -3,16 +3,38 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12">
-            <h1 class="fw-700 ls-1 anton text-center">{{project.name}}</h1>
+            <h1 class="fw-700 ls-1 anton text-center">
+                <a target="_blank" href="{{project.link}}">
+                    <span>{{project.name}}</span>
+                    <span class="fas fa-link"></span>
+                </a>
+            </h1>
 
             <div class="mt-6 container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img class="img" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}" alt="">
+                        <img    class="img big-picture c-pointer" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}"
+                                data-src="{{base_url()}}/dist/img/projects/{{project.images[0]}}" alt="">
                     </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-                        {{project.description}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 relative">
+                        {{project.description.short}}&nbsp;{{project.description.long}}
+
+                        <p class="text-gray project-categories">
+                            {% for category in project.categories %}
+                                {{category}} {% if loop.last != true %}|{% endif %}
+                            {% endfor %}
+                        </p>
                     </div>
+                </div>
+                <div class="project-images">
+                    {% for key, image in project.images %}
+                        {% if not loop.first %}
+                        <div>
+                            <img    class="big-picture c-pointer" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[key]}}"
+                                    data-src="{{base_url()}}/dist/img/projects/{{project.images[key]}}" alt="">
+                        </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
