@@ -6,3 +6,4 @@ package-lock.json
 
 .sass-cache
 .env
+sitemap.xml
