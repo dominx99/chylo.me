@@ -93,14 +93,14 @@
 
     "projects": [
         {
-            "name": "chylo.me",
+            "name": "chylo.pl",
             "description": {
                 "short": "Moje własne portfolio.",
                 "long": "Inspirowane na podstawie portolio innych programistów."
             },
             "categories": ["PHP", "Slim Framework", "Javascript", "SASS"],
-            "link": "http://chylo.cba.pl",
-            "slug": "chylo-me",
+            "link": "http://chylo.pl",
+            "slug": "chylo-pl",
             "images": [
                 "portfolio.jpg"
             ]
