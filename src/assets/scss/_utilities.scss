@@ -4,8 +4,16 @@
     background-color: $red;
 }
 
+.bg-red-4 {
+    background-color: rgba_color($red, .4);
+}
+
 .bg-red-7 {
     background-color: rgba_color($red, .7);
+}
+
+.bg-dark-4 {
+    background-color: rgba_color($dark, .4);
 }
 
 .bg-dark {
@@ -32,6 +40,10 @@
 
 .text-red {
     color: $red;
+}
+
+.text-yellow {
+    color: $yellow;
 }
 
 .ls-1 {

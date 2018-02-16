@@ -4,10 +4,14 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="fw-700 ls-1 anton text-center">
-                <a target="_blank" href="{{project.link}}">
+                {% if project.link %}
+                    <a target="_blank" href="{{project.link}}">
+                        <span>{{project.name}}</span>
+                        <span class="fas fa-link"></span>
+                    </a>
+                {% else %}
                     <span>{{project.name}}</span>
-                    <span class="fas fa-link"></span>
-                </a>
+                {% endif %}
             </h1>
 
             <div class="mt-6 container">

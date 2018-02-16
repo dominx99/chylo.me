@@ -5,15 +5,46 @@
         "birth": "1999-10-26"
     },
 
+    "levels": [
+        {
+            "description": "Zamiar nauki",
+            "rate": 0
+        },
+        {
+            "description": "Podstawy",
+            "rate": 1
+        },
+        {
+            "description": "Początkujący",
+            "rate": 2
+        },
+        {
+            "description": "Dobrze",
+            "rate": 3
+        },
+        {
+            "description": "Bardzo dobrze",
+            "rate": 4
+        },
+        {
+            "description": "Zaawansowany",
+            "rate": 5
+        }
+    ],
+
     "skills": {
         "frontend": [
             {
-                "name": "HTML",
+                "name": "Bootstrap",
                 "rate": 4
             },
             {
+                "name": "HTML",
+                "rate": 3
+            },
+            {
                 "name": "CSS",
-                "rate": 4
+                "rate": 3
             },
             {
                 "name": "Javascript",
@@ -21,11 +52,15 @@
             },
             {
                 "name": "jQuery",
-                "rate": 3
+                "rate": 2
             },
             {
                 "name": "SASS",
                 "rate": 2
+            },
+            {
+                "name": "Vue.js",
+                "rate": 0
             }
         ],
         "backend": [
@@ -44,6 +79,14 @@
             {
                 "name": "Laravel",
                 "rate": 3
+            },
+            {
+                "name": "Lumen",
+                "rate": 1
+            },
+            {
+                "name": "Symfony",
+                "rate": 0
             }
         ]
     },
@@ -52,8 +95,8 @@
         {
             "name": "chylo.me",
             "description": {
-                "short": "Moje własne portfolio",
-                "long": ""
+                "short": "Moje własne portfolio.",
+                "long": "Inspirowane na podstawie portolio innych programistów."
             },
             "categories": ["PHP", "Slim Framework", "Javascript", "SASS"],
             "link": "http://chylo.cba.pl",

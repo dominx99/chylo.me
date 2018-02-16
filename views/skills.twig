@@ -6,7 +6,7 @@
     <div class="row mt-5">
         <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
             <div class="card bg-dark-7">
-                <h4 class="card-header text-center bg-red-7">Frontend</h4>
+                <h4 class="card-header text-center">Frontend</h4>
                 <ul class="card-body ul-skills">
                     {% for skill in data.skills.frontend %}
                         <li>
@@ -22,8 +22,8 @@
             </div>
         </div>
         <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
-            <div class="card bg-dark-7">
-                <h4 class="card-header text-center bg-red-7">Backend</h4>
+            <div class="card bg-red-4">
+                <h4 class="card-header text-center">Backend</h4>
                 <ul class="card-body ul-skills">
                     {% for skill in data.skills.backend %}
                         <li>
@@ -37,6 +37,28 @@
                     {% endfor %}
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div class="row mt-6">
+            <div class="col-md-12">
+                <h2 class="text-center">Legenda</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            {% for level in data.levels %}
+                <div class="col-md-2">
+                    <div>
+                        {% for i in 1..5 %}
+                            <span class="fas fa-star {{level.rate >= i ? "text-yellow" : ""}}"></span>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        {{level.description}}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

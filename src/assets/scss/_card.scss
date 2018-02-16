@@ -5,11 +5,12 @@
     min-width: 0;
     word-wrap: break-word;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    //border: 1px solid rgba(0,0,0,.125);
+    //border-radius: 8px;
 
     .card-header{
         padding: 15px;
+        border-radius: 3px 3px 0 0;
     }
 
     .card-img {
@@ -18,6 +19,7 @@
 
     .card-body{
         padding: 15px;
+        border-radius: 0 0 3px 3px;
     }
 }
 
