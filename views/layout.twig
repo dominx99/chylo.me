@@ -25,7 +25,9 @@
 
     <script src="{{base_url()}}/dist/js/wow.min.js"></script>
     <script>
-        new WOW().init();
+        new WOW({
+            mobile: false
+        }).init();
     </script>
     <script src="{{base_url()}}/dist/js/BigPicture.min.js"></script>
     <script src="{{base_url()}}/dist/js/font-awesome.min.js"></script>
