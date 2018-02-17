@@ -1,2 +1,2 @@
-# chylo.me
+# chylo.pl
 My own portfolio page

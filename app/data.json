@@ -111,7 +111,7 @@
                 "short": "Lokalna strona parafii.",
                 "long": "Strona posiada system zarządzania treścią, możliwość dodawania, edytowania, usuwania artykułów i innych treści ze strony."
             },
-            "categories": ["PHP", "Laravel", "MySQL"],
+            "categories": ["PHP", "Laravel", "MySQL", "Javascript"],
             "link": "http://parafia-biskupiec.eu",
             "slug": "parafia-biskupiec",
             "images": [
