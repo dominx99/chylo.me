@@ -14,34 +14,7 @@ $app->get('/kontakt', function($request, $response){
     return $this->view->render($response, 'contact.twig');
 })->setName('contact');
 
-$app->post('/email/send', function($request, $response){
-
-    $dotenv = new Dotenv\Dotenv($this->path);
-    $dotenv->load();
-
-    $params = $request->getParams();
-
-    $mail = new PHPMailer;
-    $mail->SMTPDebug = 0;
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->Username = $_ENV['GMAIL_LOGIN'];
-    $mail->Password = $_ENV['GMAIL_PASSWORD'];
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
-    $mail->Host = "tls://smtp.gmail.com:587";
-    $mail->setFrom($params['from'], $params['from']);
-    $mail->addReplyTo($params['from']);
-    $mail->addAddress($_ENV['GMAIL_LOGIN'], 'Dominik');
-
-    $mail->Subject = $params['subject'];
-    $mail->Body = $params['body'];
-
-    $mail->send();
-
-    return $response->withRedirect($this->router->pathFor('contact'));
-
-})->setName('email.send');
+$app->post('/email/send', 'EmailController:send')->setName('email.send');
 
 $app->get('/projekty[/{slug}]', function($request, $response){
     $route = $request->getAttribute('route');

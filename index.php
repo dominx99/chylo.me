@@ -12,6 +12,10 @@ $container = $app->getContainer();
 
 $container['path'] = __DIR__;
 
+$dotenv = new \Dotenv\Dotenv($container->path);
+$dotenv->load();
+
+
 $container['config'] = function($container){
     return $config = require_once(__DIR__ . '/app/config.php');
 };
@@ -30,6 +34,14 @@ $container['view'] = function($container){
     $view->getEnvironment()->addGlobal('data', $container->data);
 
     return $view;
+};
+
+$container['validator'] = function($container){
+    return new App\Validation\Validator;
+};
+
+$container['EmailController'] = function($container){
+    return new App\Controllers\EmailController($container);
 };
 
 require_once(__DIR__ . '/app/routes.php');
