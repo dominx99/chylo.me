@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="wow fadeInUp" data-wow-delay="0.2s">
+    <div class="wow fadeInUp text-center" data-wow-delay="0.2s">
         <div class="row mt-6">
             <div class="col-md-12">
                 <h2 class="text-center">Legenda</h2>
@@ -48,14 +48,12 @@
         </div>
         <div class="row mt-5">
             {% for level in data.levels %}
-                <div class="col-md-2">
+                <div class="col-md-6 col-lg-4 mt-2">
                     <div>
+                        {{level.description}}
                         {% for i in 1..5 %}
                             <span class="fas fa-star {{level.rate >= i ? "text-yellow" : ""}}"></span>
                         {% endfor %}
-                    </div>
-                    <div>
-                        {{level.description}}
                     </div>
                 </div>
             {% endfor %}
