@@ -8,9 +8,40 @@
     <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/animate.min.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/main.min.css">
+
+    <style>
+        .wow {
+            visibility: hidden;
+        }
+
+        .loader {
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1100;
+            display:-webkit-box;
+            display:-ms-flexbox;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+    </style>
+
 </head>
 <body>
     <div class="layer"></div>
+
+    <div id="loader" class="loader">
+        <img src="{{base_url()}}/dist/img/loader.gif" alt="">
+    </div>
 
     <div class="container all relative">
         {% include 'partials/navbar.twig' %}
@@ -33,5 +64,10 @@
     <script src="{{base_url()}}/dist/js/font-awesome.min.js"></script>
     <script src="{{base_url()}}/dist/js/sidebar.min.js"></script>
     <script src="{{base_url()}}/dist/js/main.min.js"></script>
+    <script>
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+    </script>
 </body>
 </html>
