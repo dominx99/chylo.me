@@ -35,6 +35,8 @@ class EmailController extends Controller {
         if($validation->failed())
             return $response->withRedirect($this->router->pathFor('contact'));
 
+        unset($_SESSION['old']);
+
         $params = $request->getParams();
 
         $this->mail->setFrom($params['from'], $params['from']);
