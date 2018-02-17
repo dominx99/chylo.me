@@ -44,6 +44,9 @@ $container['EmailController'] = function($container){
     return new App\Controllers\EmailController($container);
 };
 
+$app->add(new App\Middleware\ValidationErrorsMiddleware($container));
+$app->add(new App\Middleware\OldInputMiddleware($container));
+
 require_once(__DIR__ . '/app/routes.php');
 
 $app->run();

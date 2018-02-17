@@ -8,31 +8,35 @@
 
     <h1 class="text-center">Kontakt</h1>
 
-    <div class="row mt-5 wow fadeInUp">
+    <div class="row mt-5 wow fadeIn">
         <div class="col-md-12 mt-4">
             <div class="card">
                 <div class="card-header">Wiadomość</div>
                 <div class="card-body">
                     <form action="{{path_for('email.send')}}" method="post">
 
-                        <div class="">
+                        <div class="{{errors.from ? ' has-error' : ''}}">
                             <label for="from">Email</label>
-                            <input type="email" id="from" name="from" placeholder="jan@kowalski.pl">
+                            <input type="email" id="from" name="from" placeholder="jan@kowalski.pl" value="{{old.from}}">
+                            <span>{{errors.from | first}}</span>
                         </div>
 
 
-                        <div class="mt-5">
+                        <div class="mt-5 {{errors.subject ? ' has-error' : ''}}">
                             <label for="subject">Tytuł</label>
-                            <input type="text" id="subject" name="subject" placeholder="Chciałbym Ci zlecić...">
+                            <input type="text" id="subject" name="subject" placeholder="Chciałbym Ci zlecić..." value="{{old.subject}}">
+                            <span>{{errors.subject | first}}</span>
                         </div>
 
-                        <div class="mt-5">
+                        <div class="mt-5 {{errors.body ? ' has-error' : ''}}">
                             <label for="body">Treść</label>
-                            <textarea id="body" name="body" rows="8" cols="80" placeholder="Tutaj zamieszczam szczegóły projektu..."></textarea>
-                            <button type"submit" class="btn-red mt-4 float-right">
-                                Wyślij &nbsp; <span class="fas fa-external-link-alt"></span>
-                            </button>
+                            <textarea id="body" name="body" rows="8" cols="80" placeholder="Tutaj zamieszczam szczegóły projektu...">{{old.body}}</textarea>
+                            <span>{{errors.body | first}}</span>
                         </div>
+
+                        <button type"submit" class="btn-red mt-4 float-right">
+                            Wyślij
+                        </button>
 
                     </form>
                 </div>

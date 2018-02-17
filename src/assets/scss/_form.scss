@@ -15,12 +15,14 @@ input[type="text"], input[type="email"], textarea {
 
 button {
     width: fit-content;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
-    box-shadow: 1px 1px 2px 0 $red - 15;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
     outline: none;
     transition: all .3s;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:active, &:focus {
         box-shadow: none;
@@ -30,4 +32,13 @@ button {
 .btn-red {
     background-color: $red;
     color: $white;
+}
+
+.has-error {
+    input, textarea {
+        border-color: $red;
+    }
+    span {
+        color: $gray;
+    }
 }
