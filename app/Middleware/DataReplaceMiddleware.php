@@ -10,7 +10,7 @@ class DataReplaceMiddleware extends Middleware {
 
     public function __invoke($request, $response, $next){
         try {
-            $languages = getAllHeaders()['Accept-Language'];
+            $languages = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $lang = explode(',', $languages)[0];
 
             if(isset($_SESSION['lang']))
