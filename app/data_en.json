@@ -1,0 +1,144 @@
+{
+    "info": {
+        "profession": "Backend Developer",
+        "phone": "782261099",
+        "email": "dominx992@gmail.com",
+        "birth": "1999-10-26",
+        "about": "I have been learning programming for 2 years. I specialize in writing website backend. I am currently a student in IT.",
+        "footer": "Dominik Chylo &copy; {year} All rights reserved."
+    },
+
+    "static": {
+        "about": "About me",
+        "skills": "Skills",
+        "legend": "Legend",
+        "projects": "Projects",
+        "contact": "Contact",
+        "message": "Message",
+        "subject": "Subject",
+        "body": "Body",
+        "send": "Send",
+        "placeholders": {
+            "email": "jonny@smith.com",
+            "subject": "Website",
+            "body": "Project Details"
+        }
+    },
+
+    "levels": [
+        {
+            "description": "Intention to learn",
+            "rate": 0
+        },
+        {
+            "description": "Basics",
+            "rate": 1
+        },
+        {
+            "description": "Beginner",
+            "rate": 2
+        },
+        {
+            "description": "Good",
+            "rate": 3
+        },
+        {
+            "description": "Very Good",
+            "rate": 4
+        },
+        {
+            "description": "Advanced",
+            "rate": 5
+        }
+    ],
+
+    "skills": {
+        "frontend": [
+            {
+                "name": "Bootstrap",
+                "rate": 4
+            },
+            {
+                "name": "HTML",
+                "rate": 3
+            },
+            {
+                "name": "CSS",
+                "rate": 3
+            },
+            {
+                "name": "Javascript",
+                "rate": 3
+            },
+            {
+                "name": "jQuery",
+                "rate": 2
+            },
+            {
+                "name": "SASS",
+                "rate": 2
+            },
+            {
+                "name": "Vue.js",
+                "rate": 0
+            }
+        ],
+        "backend": [
+            {
+                "name": "PHP",
+                "rate": 4
+            },
+            {
+                "name": "MySQL",
+                "rate": 3
+            },
+            {
+                "name": "Slim Framework",
+                "rate": 3
+            },
+            {
+                "name": "Laravel",
+                "rate": 3
+            },
+            {
+                "name": "Lumen",
+                "rate": 1
+            },
+            {
+                "name": "Symfony",
+                "rate": 0
+            }
+        ]
+    },
+
+    "projects": [
+        {
+            "name": "chylo.pl",
+            "description": {
+                "short": "My own portfolio.",
+                "long": "Inspired on the basis of portfolio other programmers."
+            },
+            "categories": ["PHP", "Slim Framework", "Javascript", "SASS"],
+            "link": "http://chylo.pl",
+            "slug": "chylo-pl",
+            "images": [
+                "portfolio.jpg"
+            ]
+        },
+        {
+            "name": "parafia-biskupiec.eu",
+            "description": {
+                "short": "Local page of the parish.",
+                "long": "The site has a content management system, the ability to add, edit, delete articles and other content from the site."
+            },
+            "categories": ["PHP", "Laravel", "MySQL", "Javascript"],
+            "link": "http://parafia-biskupiec.eu",
+            "slug": "parafia-biskupiec",
+            "images": [
+                "parafia-biskupiec.jpg",
+                "parafia-biskupiec-1.jpg",
+                "parafia-biskupiec-2.jpg"
+            ]
+        }
+    ]
+}

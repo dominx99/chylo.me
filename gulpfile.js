@@ -18,13 +18,21 @@ gulp.task('css', () => {
 });
 
 gulp.task('img', function(){
-    return gulp.src('src/assets/img/**/*')
+    gulp.src('src/assets/img/**/*')
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
             optimizationLevel: 5
         }))
         .pipe(gulp.dest('dist/img'));
+
+    gulp.src('src/assets/icons/**/*')
+        .pipe(imagemin({
+            interlaced: true,
+            progressive: true,
+            optimizationLevel: 5
+        }))
+        .pipe(gulp.dest('dist/icons'));
 });
 
 gulp.task('js', function(){

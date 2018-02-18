@@ -13,10 +13,19 @@
     </div>
 
     <div class="navbar-nav md-show">
-        <a href="{{path_for('about.me')}}"><span class="fa fa-user"></span> O mnie</a>
-        <a href="{{path_for('skills')}}"><span class="fa fa-star"></span> Umiejętności</a>
-        <a href="{{path_for('projects')}}"><span class="fa fa-list-alt"></span> Projekty</a>
-        <a href="{{path_for('contact')}}"><span class="fa fa-phone"></span> Kontakt</a>
+        <a href="{{path_for('about.me')}}"><span class="fa fa-user"></span> {{data.static.about}}</a>
+        <a href="{{path_for('skills')}}"><span class="fa fa-star"></span> {{data.static.skills}}</a>
+        <a href="{{path_for('projects')}}"><span class="fa fa-list-alt"></span> {{data.static.projects}}</a>
+        <a href="{{path_for('contact')}}"><span class="fa fa-phone"></span> {{data.static.contact}}</a>
+        &nbsp;
+    </div>
+    <div class="navbar-nav flags">
+        <a class="v-center" href="{{path_for('lang.change', {'lang': 'pl'})}}">
+            <span class="flag-icon flag-icon-pl"></span>
+        </a>
+        <a class="v-center" href="{{path_for('lang.change', {'lang': 'en'})}}">
+            <span class="flag-icon flag-icon-gb"></span>
+        </a>
     </div>
 
     <span id="navbar-toggle" class="navbar-toggle">

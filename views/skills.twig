@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-    <h1 class="text-center text-white anton ls-1 fw-700">Umiejętności</h1>
+    <h1 class="text-center text-white anton ls-1 fw-700">{{data.static.skills}}</h1>
 
     <div class="row mt-5">
         <div class="col-md-6 wow fadeInLeft">
@@ -43,7 +43,7 @@
     <div class="wow fadeInUp text-center">
         <div class="row mt-6">
             <div class="col-md-12">
-                <h2 class="text-center">Legenda</h2>
+                <h2 class="text-center">{{data.static.legend}}</h2>
             </div>
         </div>
         <div class="row mt-5">

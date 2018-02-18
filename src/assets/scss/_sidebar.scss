@@ -1,9 +1,20 @@
 @media screen and (max-width: $md){
     .navbar {
-        .navbar-nav {
+        .navbar-nav:not(.flags) {
             display: none;
         }
     }
+
+    .flags {
+        margin-right: 3px;
+    }
+
+    .navbar-toggle {
+        padding: 0 8px;
+        border: 2px solid $white;
+        border-radius: 3px;
+    }
+
     .navbar.sidebar {
         background-color: $red;
         position: fixed;
@@ -40,6 +51,10 @@
             a {
                 padding: 10px;
             }
+        }
+
+        .navbar-nav.flags {
+            flex-direction: row;
         }
     }
 }

@@ -1,8 +1,28 @@
 {
     "info": {
+        "profession": "Programista Backendu",
         "phone": "782261099",
         "email": "dominx992@gmail.com",
-        "birth": "1999-10-26"
+        "birth": "1999-10-26",
+        "about": "Programowania uczę się od {years} lat. Specjalizuję się w pisaniu backend'u stron internetowych. Obecnie jestem uczniem w technikum informatycznym.",
+        "footer": "Dominik Chylo &copy; {year} Wszelkie prawa zatrzeżone."
+    },
+
+    "static": {
+        "about": "O mnie",
+        "skills": "Umiejętnośći",
+        "legend": "Legenda",
+        "projects": "Projekty",
+        "contact": "Kontakt",
+        "message": "Wiadomość",
+        "subject": "Temat",
+        "body": "Treść",
+        "send": "Wyślij",
+        "placeholders": {
+            "email": "jan@kowalski.pl",
+            "subject": "Strona internetowa",
+            "body": "Szczegóły projektu"
+        }
     },
 
     "levels": [

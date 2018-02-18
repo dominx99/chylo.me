@@ -7,12 +7,12 @@
 {% block content %}
     <div class="about-me text-white text-center wow slideInUp">
         <h1 class="fw-700 ls-1 anton">Dominik Chylo</h1>
-        <h3 class="fw-400 text-gray mt-2 anton">Backend developer</h3>
+        <h3 class="fw-400 text-gray mt-2 anton">{{data['info']['profession']}}</h3>
 
         <div class="mt-6">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-md-2 offset-lg-3">
-                    <p>Programowania uczę się od {{ (diff.days / 365) | round(0, 'floor') }} lat. Specjalizuję się w pisaniu backend'u stron internetowych. Obecnie jestem uczniem w technikum informatycznym.</p>
+                    <p>{{data['info']['about']}}</p>
                 </div>
             </div>
         </div>

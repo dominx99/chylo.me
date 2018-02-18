@@ -6,36 +6,36 @@
 
 {% block content %}
 
-    <h1 class="text-center">Kontakt</h1>
+    <h1 class="text-center">{{data.static.contact}}</h1>
 
     <div class="row mt-5 wow fadeIn">
         <div class="col-md-12 mt-4">
             <div class="card">
-                <div class="card-header">Wiadomość</div>
+                <div class="card-header">{{data.static.message}}</div>
                 <div class="card-body">
                     <form action="{{path_for('email.send')}}" method="post">
 
                         <div class="{{errors.from ? ' has-error' : ''}}">
                             <label for="from">Email</label>
-                            <input type="email" id="from" name="from" placeholder="jan@kowalski.pl" value="{{old.from}}">
+                            <input type="email" id="from" name="from" placeholder="{{data.static.placeholders.email}}" value="{{old.from}}">
                             <span>{{errors.from | first}}</span>
                         </div>
 
 
                         <div class="mt-5 {{errors.subject ? ' has-error' : ''}}">
-                            <label for="subject">Tytuł</label>
-                            <input type="text" id="subject" name="subject" placeholder="Chciałbym Ci zlecić..." value="{{old.subject}}">
+                            <label for="subject">{{data.static.subject}}</label>
+                            <input type="text" id="subject" name="subject" placeholder="{{data.static.placeholders.subject}}" value="{{old.subject}}">
                             <span>{{errors.subject | first}}</span>
                         </div>
 
                         <div class="mt-5 {{errors.body ? ' has-error' : ''}}">
-                            <label for="body">Treść</label>
-                            <textarea id="body" name="body" rows="8" cols="80" placeholder="Tutaj zamieszczam szczegóły projektu...">{{old.body}}</textarea>
+                            <label for="body">{{data.static.body}}</label>
+                            <textarea id="body" name="body" rows="8" cols="80" placeholder="{{data.static.placeholders.body}}">{{old.body}}</textarea>
                             <span>{{errors.body | first}}</span>
                         </div>
 
                         <button type"submit" class="btn-red mt-4 float-right">
-                            Wyślij
+                            {{data.static.send}}
                         </button>
 
                     </form>
