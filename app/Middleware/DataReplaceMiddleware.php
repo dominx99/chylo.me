@@ -21,8 +21,8 @@ class DataReplaceMiddleware extends Middleware {
         }
 
         switch($lang){
-            case 'pl-Pl': $lang = 'pl'; break;
-            case 'en-US': $lang = 'en'; break;
+            case "pl-PL": $lang = 'pl'; break;
+            case "en-US": $lang = 'en'; break;
         }
 
         if(!in_array($lang, $this->acceptLanguages))
