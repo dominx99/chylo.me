@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config['name']}}</title>
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Programowania uczę się od kilku lat. Specjalizuję się w pisaniu backend'u stron internetowych. Obecnie jestem uczniem w technikum informatycznym.">
+
+    <title>{% block title %}{% endblock %} - {{config['name']}} - Programista</title>
+
     <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/animate.min.css">
     <link rel="stylesheet" href="{{base_url()}}/dist/css/flag-icon.min.css">
