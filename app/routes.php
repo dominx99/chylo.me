@@ -16,8 +16,6 @@ $app->get('/kontakt', function($request, $response){
 
 $app->post('/email/send', 'EmailController:send')->setName('email.send');
 
-$app->get('/lang/change/{lang}', 'LanguageController:change')->setName('lang.change');
-
 $app->get('/projekty[/{slug}]', function($request, $response){
     $route = $request->getAttribute('route');
     $slug = $route->getArgument('slug');
@@ -39,3 +37,5 @@ $app->get('/projekty[/{slug}]', function($request, $response){
 
     return $this->view->render($response, 'projects.twig');
 })->setName('projects');
+
+$app->get('/{lang}', 'LanguageController:change')->setName('lang.change');

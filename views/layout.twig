@@ -7,12 +7,7 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Programowania uczę się od kilku lat. Specjalizuję się w pisaniu backend'u stron internetowych. Obecnie jestem uczniem w technikum informatycznym.">
 
-    <title>{% block title %}{% endblock %} - {{config['name']}} - Programista</title>
-
-    <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="{{base_url()}}/dist/css/animate.min.css">
-    <link rel="stylesheet" href="{{base_url()}}/dist/css/flag-icon.min.css">
-    <link rel="stylesheet" href="{{base_url()}}/dist/css/main.min.css">
+    <title>{{config['name']}}</title>
 
     <style>
         .wow {
@@ -39,6 +34,21 @@
         }
 
     </style>
+
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/animate.min.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/flag-icon.min.css">
+    <link rel="stylesheet" href="{{base_url()}}/dist/css/main.min.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114346514-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114346514-1');
+    </script>
 
 </head>
 <body>

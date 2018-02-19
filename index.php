@@ -28,6 +28,12 @@ $container['config'] = function($container){
 
 //LANGUAGE
 
+$container['acceptLanguages'] = function($container){
+    return [
+        'pl', 'en'
+    ];
+};
+
 $container['LanguageController'] = function($container){
     return new App\Controllers\LanguageController($container);
 };

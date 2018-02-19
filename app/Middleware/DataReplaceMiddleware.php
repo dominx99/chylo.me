@@ -4,10 +4,6 @@ namespace App\Middleware;
 
 class DataReplaceMiddleware extends Middleware {
 
-    protected $acceptLanguages = [
-        'pl', 'en'
-    ];
-
     public function __invoke($request, $response, $next){
         try {
             $languages = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -25,7 +21,7 @@ class DataReplaceMiddleware extends Middleware {
             case "en-US": $lang = 'en'; break;
         }
 
-        if(!in_array($lang, $this->acceptLanguages))
+        if(!in_array($lang, $this->container['acceptLanguages']))
             $lang = 'en';
 
         $then = date_create(date('Y-m-d', strtotime('2015-09-01')));
