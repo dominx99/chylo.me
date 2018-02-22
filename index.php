@@ -17,7 +17,7 @@ $container = $app->getContainer();
 
 $container['path'] = __DIR__;
 
-$dotenv = new \Dotenv\Dotenv($container->path);
+$dotenv = new \Dotenv\Dotenv($container->path . '/config');
 $dotenv->load();
 
 //CONFIG
