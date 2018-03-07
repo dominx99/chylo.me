@@ -122,7 +122,8 @@
             "link": "http://chylo.pl",
             "slug": "chylo-pl",
             "images": [
-                "portfolio.jpg"
+                "portfolio.jpg",
+                "portfolio-1.jpg"
             ]
         },
         {
@@ -138,6 +139,19 @@
                 "parafia-biskupiec.jpg",
                 "parafia-biskupiec-1.jpg",
                 "parafia-biskupiec-2.jpg"
+            ]
+        },
+        {
+            "name": "gocscodes.com",
+            "description": {
+                "short": "Strona o tematyce CSGO.",
+                "long": "Lista stron hazardowych. Strona posiada panel zarządzania treścią."
+            },
+            "categories": ["PHP", "Slim Framework", "MySQL"],
+            "link": "http://gocscodes.com",
+            "slug": "gocscodes",
+            "images": [
+                "gocscodes.jpg"
             ]
         }
     ]

@@ -122,7 +122,8 @@
             "link": "http://chylo.pl",
             "slug": "chylo-pl",
             "images": [
-                "portfolio.jpg"
+                "portfolio.jpg",
+                "portfolio-1.jpg"
             ]
         },
         {
@@ -138,6 +139,19 @@
                 "parafia-biskupiec.jpg",
                 "parafia-biskupiec-1.jpg",
                 "parafia-biskupiec-2.jpg"
+            ]
+        },
+        {
+            "name": "gocscodes.com",
+            "description": {
+                "short": "CSGO related page.",
+                "long": "List of counter strike gambling games. The site has a content management system."
+            },
+            "categories": ["PHP", "Slim Framework", "MySQL", "SASS"],
+            "link": "http://gocscodes.com",
+            "slug": "gocscodes",
+            "images": [
+                "gocscodes.jpg"
             ]
         }
     ]
