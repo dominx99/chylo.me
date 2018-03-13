@@ -3,13 +3,9 @@
 session_start();
 require_once(__DIR__ . '/vendor/autoload.php');
 
-ini_set('session.gc_divisor', 1);
-ini_set('session.gc_probability', 1);
-ini_set('session.gc_maxlifetime', 5*24*60*60);
-
 $app = new Slim\App([
     'settings' => [
-        'displayErrorDetails' => true,
+        'displayErrorDetails' => false,
     ]
 ]);
 

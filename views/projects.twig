@@ -6,8 +6,9 @@
             <h1 class="fw-700 ls-1 anton text-center">{{data.static.projects}}</h1>
 
             <div class="card-columns mt-5">
+                {% set i = 0 %}
                 {% for project in data.projects %}
-                    <div class="card bg-dark-7 wow zoomIn">
+                    <div class="card bg-dark-7 wow zoomIn" data-wow-delay="{{ i * 0.1 }}s" data-wow-duration=".8s">
                         <div class="card-header bg-red-7">
                             <a href="{{path_for('projects', {'slug': project.slug})}}">{{project.name}}</a>
                             <a target="_blank" href="{{project.link}}" class="float-right">
@@ -21,6 +22,7 @@
                             <p>{{project.description.short}}</p>
                         </div>
                     </div>
+                    {% set i = i + 1 %}
                 {% endfor %}
             </div>
         </div>
