@@ -17,8 +17,7 @@
             <div class="mt-6 container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img    class="img big-picture c-pointer" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}"
-                                data-src="{{base_url()}}/dist/img/projects/{{project.images[0]}}" alt="">
+                        <img class="img big-picture c-pointer single" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[0]}}" data-src="{{base_url()}}/dist/img/projects/{{project.images[0]}}" alt="">
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 relative">
                         {{project.description.short}}&nbsp;{{project.description.long}}
@@ -30,14 +29,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="project-images">
+                <div class="project-images big-picture-gallery">
                     {% for key, image in project.images %}
-                        {% if not loop.first %}
-                            <div>
-                                <img    class="big-picture c-pointer" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[key]}}"
-                                        data-src="{{base_url()}}/dist/img/projects/{{project.images[key]}}" alt="">
-                            </div>
-                        {% endif %}
+                        <div>
+                            <img class="big-picture c-pointer" src="{{base_url()}}/dist/img/projects/thumbs/{{project.images[key]}}" data-bp="{{base_url()}}/dist/img/projects/{{project.images[key]}}" alt="">
+                        </div>
                     {% endfor %}
                 </div>
             </div>
