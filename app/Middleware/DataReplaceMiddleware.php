@@ -24,6 +24,8 @@ class DataReplaceMiddleware extends Middleware {
         if(!in_array($lang, $this->container['acceptLanguages']))
             $lang = 'en';
 
+        $this->container->view->getEnvironment()->addGlobal('lang', $lang);
+
         $then = date_create(date('Y-m-d', strtotime('2015-09-01')));
         $now = date_create(date('Y-m-d'));
         $diff = date_diff($now, $then);
