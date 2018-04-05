@@ -8,11 +8,13 @@ class LanguageController extends Controller {
         $route = $request->getAttribute('route');
         $lang = $route->getArgument('lang');
 
-        if(in_array($lang, $this->container['acceptLanguages']))
+        if(in_array($lang, $this->container['acceptLanguages'])) {
             $_SESSION['lang'] = $lang;
+        }
 
-        if(isset($_SERVER['HTTP_REFERER']))
+        if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_HOST'] == parse_url($_SERVER['HTTP_REFERER'])['host']) {
             return $response->withRedirect($_SERVER['HTTP_REFERER']);
+        }
 
         return $response->withRedirect($this->router->pathFor('about.me'));
     }
