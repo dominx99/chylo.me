@@ -14,7 +14,7 @@ class EmailController extends Controller {
         parent::__construct($container);
 
         $this->mail = new PHPMailer;
-        $this->SMTPDebug = 2;
+        $this->SMTPDebug = 0;
         $this->mail->isSMTP();
         $this->mail->SMTPAuth = true;
         $this->mail->Username = $_ENV['GMAIL_LOGIN'];
