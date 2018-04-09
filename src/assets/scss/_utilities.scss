@@ -58,6 +58,26 @@
     font-weight: 400;
 }
 
+@media (max-width: $sm) {
+    .phone-text-left {
+        text-align: left;
+    }
+
+    .phone-text-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: $sm) {
+    .desktop-text-left {
+        text-align: left;
+    }
+
+    .desktop-text-right {
+        text-align: right;
+    }
+}
+
 //MARGIN
 
 .mt-2 {
@@ -86,6 +106,13 @@
 
 .mr-auto {
     margin-right: auto;
+}
+
+//PADDING
+
+.ph-15px {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 //DISPLAY
