@@ -14,7 +14,7 @@ class EmailController extends Controller {
         parent::__construct($container);
 
         $this->mail = new PHPMailer;
-        $this->SMTPDebug = 0;
+        $this->SMTPDebug = 2;
         $this->mail->isSMTP();
         $this->mail->SMTPAuth = true;
         $this->mail->Username = $_ENV['GMAIL_LOGIN'];
@@ -41,7 +41,7 @@ class EmailController extends Controller {
 
         $this->mail->setFrom($params['from'], $params['from']);
         $this->mail->addReplyTo($params['from']);
-        $this->mail->addAddress($_ENV['GMAIL_LOGIN'], 'Dominik');
+        $this->mail->addAddress($_ENV['GMAIL_ADDRESS'], 'Dominik');
 
         $this->mail->Subject = $params['subject'];
         $this->mail->Body = $params['body'];
