@@ -1,2 +1,3 @@
-# chylo.pl
-My own portfolio page
+# [chylo.pl] portfolio
+My own portfolio page.
+Check License [here](https://choosealicense.com/no-license/)
